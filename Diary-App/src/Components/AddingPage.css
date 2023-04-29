@@ -1,0 +1,141 @@
+.addPg {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    color: #fff;
+    height: 100vh;
+}
+
+.Addheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.closeBtn {
+    flex: 0.1;
+    font-size: 200%;
+}
+
+.emoji {
+    flex: 0.2;
+    font-size: 200%;
+}
+
+.write {
+    flex: 0.7;
+    text-align: center;
+    width: 100%;
+    font-size: 180%;
+}
+
+.Adddate {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+    flex-direction: row;
+    font-size: 110%;
+    margin-bottom: 40px;
+}
+
+.closeBtn span {
+    border-radius: 50%;
+    background-color: rgba(15, 114, 6, 0.623);
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+}
+
+.addTitle, .addDesc {
+    width: 90%;
+    margin: 20px auto 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+ .newTitle, .newDesc {
+    width: 100%;
+    
+}
+.addTitle {
+    min-height: 50px;
+    font-size: 110%;
+    line-height: 1.4em;
+}
+
+.newTitle {
+    background-color: rgba(15, 114, 6, 0.623);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    height: 100%;
+    color: #fff;
+    padding: 5px;
+    font-size: 107%;
+}
+
+.addDesc {
+    height: 45vh;
+}
+
+.newDesc {
+    border: none;
+    border-radius: 20px;
+    line-height: 1.4em;
+    padding: 5px;
+    outline: none;
+    height: 100%;
+    font-size: 110%;
+    background-color: rgba(15, 114, 6, 0.623);
+    color: #fff;
+}
+
+.addbtn {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.btn {
+    width: 50%;
+    font-weight: 600;
+    font-size: 110%;
+    background-color: rgba(15, 114, 6, 0.623);
+    border: none;
+    outline: none;
+    padding: 7px;
+    color: #fff;
+}
+
+.mood {
+    font-size: 40%;
+}
+
+.happy, .sad {
+    cursor: pointer;
+    font-size: 90%;
+    display: inline-block;
+}
+
+.emoji {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

@@ -1,0 +1,87 @@
+.Diaries {
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    color: #fff;
+    margin: 20px auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+}
+
+.Dlist {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(15, 114, 6, 0.623);
+    border-radius: 20px;
+    margin: 0 auto;
+    flex-direction: row;
+    min-height: 80px;
+    padding: 10px;
+}
+
+.date {
+    flex: 0.2;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-weight: 400;
+    font-size: 80%;
+}
+
+.right {
+    flex: 0.8;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Dtitle {
+    font-size: 140%;
+    width: 100%;
+    height: 100%;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+
+.title {
+    flex: 0.9;
+    width: 100%
+}
+
+.emoji {
+    flex: 0.1;
+}
+
+.link {
+    text-decoration: none;
+    width: 100%;
+    color: #fff;
+}
+
+.Ddescrip {
+    width: 100%;
+    height: 100%;
+}
