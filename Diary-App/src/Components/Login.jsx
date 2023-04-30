@@ -10,22 +10,26 @@ function Login() {
     const [message, setMsg] = useState("")
     const navigate = useNavigate()
 
-    const handleLogIn = (e) => {
+    const handleLogIn = () => {
 
         const user = {
             username: username,
             password: password
         }
 
-        getUser(user, (data) => { 
-            const _id = data._id
-            console.log(_id)
-            navigate(`/home/${_id}`, 
-            {state: {username: data.username}})
+        getUser(user, (data) => {
+            try { 
+                const _id = data._id
+                console.log(_id)
+                navigate(`/home/${_id}`, 
+                {state: {username: data.username, _id: data._id}})
+            } catch {
+                setMsg(data.error)
+            }
         })
     }
 
-    const handleSignUp = (e) => {
+    const handleSignUp = () => {
         const user = {
             username: username,
             password: password

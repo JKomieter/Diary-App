@@ -46,8 +46,13 @@ function getUser(user, next) {
     })
     .then((data) => data.json())
     .then((data) => {
-        window.localStorage.setItem("token", data.token)
-        next(data)})
+        try {
+            window.localStorage.setItem("token", data.token)
+            next(data)}
+        catch {
+            next(data)
+        }
+    })
     .catch((err) => console.log(err))
 }
 

@@ -11,7 +11,7 @@ function UpdatePage() {
     const [description, setDescription] = useState("")
     const [mood, setMood] = useState("")
 
-    const { _id } = useParams()
+    const { _id, username } = useParams()
 
     const dateObj = new Date()
     const smile = emoji.getUnicode("smile")
@@ -22,7 +22,8 @@ function UpdatePage() {
     const returnHome = (e) => {
         //redirect user to home page when close in clicked
         e.preventDefault();
-        navigate("/home")
+        navigate(`/home/${_id}`, 
+        {state: {_id: _id, username: username}})
     }
 
     useEffect(() => {
@@ -54,7 +55,9 @@ function UpdatePage() {
             _id: _id
         }
         updateDairy(diary)
-        navigate("/home")
+        navigate(`/home/${_id}`, {
+            state: {_id: _id, username: username}
+        })
     }
 
   return (

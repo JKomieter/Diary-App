@@ -33,6 +33,9 @@
     /* background-color:  rgba(15, 114, 6, 0.623); */
     border: 20px;
     padding: 0;
+    color: #fff;
+    font-size: 200%;
+    text-transform: capitalize;
 }
 
 .bar {

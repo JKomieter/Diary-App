@@ -4,12 +4,14 @@ import emoji from "emoji-dictionary";
 import { AiOutlineCalendar } from "react-icons/ai"
 import { useState } from "react";
 import { saveDiary } from "../../utils/DiaryUtils";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function AddingPage() {
     const dateObj = new Date();
 
     const navigate = useNavigate()
+
+    const { _id, username } = useParams()
 
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("")
@@ -30,9 +32,9 @@ function AddingPage() {
         //check if all fields are field
         if (Object.values(diary)) {
             saveDiary(diary)
-            navigate("/home")
+            navigate(`/home/${_id}`, {state: {username: username}})
         } else {
-            navigate("/save")
+            navigate(`/save/${_id}`)
         }
     }
 
@@ -48,7 +50,7 @@ function AddingPage() {
     const returnHome = (e) => {
         //redirect user to home page when close in clicked
         e.preventDefault();
-        navigate("/home")
+        navigate(`/home/${_id}`, {state: {_id: _id, username: username}})
     }
 
     return (
