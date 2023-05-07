@@ -10,14 +10,11 @@ module.exports.getUser = async (req, res) => {
     //find user in database
     userModel.find({username: username})
     .then((user) => {
-        try {
             console.log(user[0])
             bcrypt.compareSync(password, user[0].password) ? 
             res.json({username: user[0].username, token: TOKEN, _id: user[0]._id}) :
             res.json({error: "Username and password do not match"})
-        } catch {
-            res.json({error: "Username and password do not match"})
-        }
+        
     })
     .catch((err) => console.log(err))
 }

@@ -18,13 +18,13 @@ function Login() {
         }
 
         getUser(user, (data) => {
-            try { 
+            if (data.error) {
+                setMsg(data.error)
+            } else {
                 const _id = data._id
                 console.log(_id)
                 navigate(`/home/${_id}`, 
                 {state: {username: data.username, _id: data._id}})
-            } catch {
-                setMsg(data.error)
             }
         })
     }
